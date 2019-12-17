@@ -91,7 +91,7 @@ for (let i = 0; i <= 48; i += 1) {
 //! Write a loop using for structure that prints all negative numbers until -30 (excluding).
 
 
-for (let i = -30; i <= 0; i += 1) {   //DUVIDAAAAA
+for (let i = 0; i >= -30; i -= 1) {   // FOR MENOR QUE ZERO 
   if (i % 2 === 1) {
     console.log(i);
   }
@@ -127,16 +127,18 @@ pets.forEach(pet => console.log(pet));
 
 const array = [1, "x", 3, 8, "x", 5, 7, 3, "x", 2, 6, "x", 10];
 // Use FOR to count and print how many times the letter x appears in the array
+let countX = 0;
 for (let i = 0; i < array.length; i += 1) {
   if (array[i] === "x") {
-    console.log(array[i]);
-  }
+    countX += 1
+  } 
 }
 
 //! Use FOR EACH to count and print how many times the letter x appears in the array
+countX = 0;
 array.forEach(x => {
   if (x === "x") {
-    console.log(x);
+    countX += 1;
   }
 });
 

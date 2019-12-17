@@ -148,8 +148,7 @@ const positive = num => Math.abs(num);
 // isNumber(5); → true
 // isNumber('hi'); → false
 function isNumber(value) {
-  const isNumber = typeof value === "number";
-  return isNumber;
+  return typeof value === "number"
 }
 //*** ES6 ***//
 const isNumber = value => typeof value === "number";
@@ -159,21 +158,23 @@ const isNumber = value => typeof value === "number";
 //! Returns boolean of whether argument is classified as an Array object
 // isArray(5); → false
 // isArray([1,2,3]); → true
-function isArray(value) {}
+function isArray(value) {
+  return value.length >= 0
+}
 //*** ES6 ***//
 
+const isArray = value => value.length >= 0
 //--------------------------------------------------------------------------------//
 //*** ES5 ***//
 //! Returns boolean of whether argument is classified as an Object
 // isObject(5); → false
 // isObject([1,2,3]); → false
 function isObject(value) {
-    const isObject = value === Object;
-    return value 
+    return typeof value === Object;
 }
 
 //*** ES6 ***//
-const isObject = value => value === Object;
+const isObject = value => typeof value === Object;
 
 //--------------------------------------------------------------------------------//
 //*** ES5 ***//
@@ -181,8 +182,7 @@ const isObject = value => value === Object;
 // isNull(null); -> true
 // isNull(5); -> false
 function isNull(value) {
-    const isNull = value === null;
-    return value 
+    return value === null
 }
 
 //*** ES6 ***//
